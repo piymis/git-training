@@ -16,13 +16,14 @@ Plan
  * mac
  * configuration
 * Working with git
+  * initialize repository
   * commit + ancestors
   * log
   * staging area
-  * fetch pull push
   * stash
   * branch + tag
   * diff
+  * fetch pull push
   * merge
   * cherry pick
   * rebase

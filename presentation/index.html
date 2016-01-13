@@ -155,6 +155,68 @@ Date:   Wed Jan 13 15:13:01 2016 +0100
 						<img src="images/history_sourcetree.png"/>
 					</section>
 				</section>
+				<section>
+					<section>
+						<h3>Adding file to commit</h3>
+						<img src="images/staging.png">
+						<p>the staging area is a buffer where you define what will be in the next commit</p>
+					</section>
+					<section>
+						<div class="fragment">
+							<p>add a single file</p>
+							<code>git add myfile.txt</code>
+						</div>
+							<div class="fragment">
+								<p>add all files</p>
+								<code>git add --all</code>
+							</div>
+					</section>
+					<section>
+						<p class="fragment">before adding</p>
+						<pre><code class="fragment">
+$git status
+on branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add &ltfile&gt..." to update what will be committed)
+  (use "git checkout -- &ltfile&gt..." to discard changes in working directory)
+
+		modified:   presentation/index.html
+
+Untracked files:
+  (use "git add &ltfile&gt..." to include in what will be committed)
+
+		presentation/images/staging.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+						</code></pre>
+					</section>
+					<section>
+						<p class="fragment">after <code>git add --all</code></p>
+						<pre><code class="fragment">
+$git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD &ltfile&gt..." to unstage)
+
+	new file:   presentation/images/staging.png
+	modified:   presentation/index.html
+						</code></pre>
+						<p class="fragment">you can now commit using <code>git commit</code></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>fetch pull and push</h3>
+						<p>these command allow interaction with a remote repository</p>
+					</section>
+						<section>
+							<h3>fetch and pull</h3>
+							<p class="fragment"><code>git fetch</code> retrieve changes from a remote repository but do not change the working copy</p>
+							<p class="fragment"><code>git pull</code> is used more often, it is a shortcut that does <code>git fetch</code> and <code>git merge</code></p>
+						</section>
+				</section>
 			</div>
 			<script src="lib/js/head.min.js"></script>
 			<script src="js/reveal.js"></script>
