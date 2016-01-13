@@ -41,25 +41,56 @@
 
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
-			<section>
+			<section data-background="images/git_logo.png" data-background-size="1000px">
 				<h1>Git</h1>
 				<h3>for the newbies</h3>
 			</section>
 
 				<section id="fragments">
 					<h1>What is git?</h1>
+					<img src="images/git_plus_minus_logo.png">
 					<p class="fragment">a Distributed VCS (Version Control System):</p>
 					<p class="fragment">Every local copy contains the whole content of the "central" repository</p>
 				</section>
 
 				<section>
-					<h1>Overview</h1>
-					<p class="fragment">toto</p>
+					<p>Git stores Snapshots, Not Differences.</p>
+					<p>Where other VCS record Deltas to rebuild the complete files, GIT stores snapshots of modified files.</p>
+					<img class="fragment" data-src="images/deltas.png">
+				</section>
+
+				<section>
+					<p>Git stores Snapshots, Not Differences.</p>
+					<p>Where other VCS record Deltas to rebuild the complete files, GIT stores snapshots of modified files.</p>
+					<img class="fragment" data-src="images/snapshots.png">
+				</section>
+
+				<section>
+					<h1>Some PITAs in other VCS (like CVS, SVN...)</h1>
+					<ul>
+						<li>checking out was often slow</li>
+						<li>fixing conflicts was done at commit</li>
+						<li>branching did a full copy of all files</li>
+						<li>merging was for the brave only</li>
+				</section>
+
+				<section>
+					<h1>Advantages on other VCS</h1>
+					<p>Git aims at proposing:
+					<ul>
+						<li>Speed
+						<li>Simple design
+						<li>Strong support for non-linear development (thousands of parallel branches)
+						<li>Fully distributed
+						<li>Able to handle large projects like the Linux kernel efficiently (speed and data size)
+					</ul>
+					</p>
 				</section>
 
 				<section>
 					<h1>Repository working copy</h1>
-					<p>toto</p>
+					<p>Current version of the file / folder structure + .git folder</p>
+					<img data-src="images/working_copy.png">
 				</section>
 
 				<section>
