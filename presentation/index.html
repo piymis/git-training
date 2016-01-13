@@ -54,15 +54,17 @@
 				</section>
 
 				<section>
-					<p>Git stores Snapshots, Not Differences.</p>
+				<h3>Git stores Snapshots, Not Differences</h3>
 					<p>Where other VCS record Deltas to rebuild the complete files, GIT stores snapshots of modified files.</p>
-					<img class="fragment" data-src="images/deltas.png">
+				<p class="fragment">SVN:
+					<img data-src="images/deltas.png">
+				</p>
 				</section>
 
 				<section>
-					<p>Git stores Snapshots, Not Differences.</p>
-					<p>Where other VCS record Deltas to rebuild the complete files, GIT stores snapshots of modified files.</p>
-					<img class="fragment" data-src="images/snapshots.png">
+				<h3>Git stores Snapshots, Not Differences</h3>
+				Git:
+				<img data-src="images/snapshots.png">
 				</section>
 
 				<section>
@@ -72,24 +74,33 @@
 						<li>fixing conflicts was done at commit</li>
 						<li>branching did a full copy of all files</li>
 						<li>merging was for the brave only</li>
+				</ul>
 				</section>
 
+				<section>
 				<section>
 					<h1>Advantages on other VCS</h1>
 					<p>Git aims at proposing:
 					<ul>
-						<li>Speed
-						<li>Simple design
-						<li>Strong support for non-linear development (thousands of parallel branches)
-						<li>Fully distributed
-						<li>Able to handle large projects like the Linux kernel efficiently (speed and data size)
+						<li>Speed</li>
+						<li>Simple design</li>
+						<li>Strong support for non-linear development (thousands of parallel branches)</li>
+						<li>Fully distributed</li>
+						<li>Able to handle large projects like the Linux kernel efficiently (speed and data size)</li>
 					</ul>
 					</p>
 				</section>
+				<section>
+					<p>Indeed Git is fast: operations are almost instantaneous</p>
+					<p class="fragment">The entire history is accessible offline</p>
+					<p class="fragment">Branching is not scary. Actually, branching is the essence of Git. It so easy and flexible that we create several branches every day.</p>
+				</section>
+			</section>
+
 
 				<section>
 					<h1>Repository working copy</h1>
-					<p>Current version of the file / folder structure + .git folder</p>
+				<p>Current version of the file / folder structure + .git directory</p>
 					<img data-src="images/working_copy.png">
 				</section>
 
@@ -99,6 +110,26 @@
 						<img data-src="images/git-areas.png">
 					</p>
 				</section>
+
+			<section>
+				<section>
+					<h1>Setting-up Git working</h1>
+				</section>
+				<section>
+					<h3>Installation on Windows</h3>
+					<p>Download it from <a href="http://git-scm.com/download/win">http://git-scm.com/download/win</a></p>
+					<p>Add a <a href="http://git-scm.com/downloads/guis">GUI</a> on top, or use the command line</p>
+				</section>
+				<section>
+					<h3>Installation on linux</h3>
+					<code>$ sudo apt-get install git</code>
+					<p><span style="text-decoration: line-through;">Add a <a href="http://git-scm.com/downloads/guis">GUI</a> on top,</span> or use the command line</p>
+				</section>
+				<section>
+					<h3>Installation on a Mac</h3>
+					<p>Use your favorite package installer, or refer to <a href="http://git-scm.com/book/en/v2/Getting-Started-Installing-Git#Installing-on-Mac">standard git-scm procedure</a></p>
+				</section>
+			</section>
 
 
 
@@ -124,11 +155,11 @@
 					</section>
 				</section>
 				<section>
-					<section>
+				<section>
 						<h3>log</h3>
 						<p>Show the history of a repository</p>
 						<p class="fragment"><code>git log</code></p>
-					</section>
+				</section>
 					<section>
 						<pre><code>commit fc365c472c195e40d8f4b6278b17a88750e81a92
 Author: Baptiste Mesta &ltbaptiste.mesta@gmail.com&gt
@@ -152,7 +183,7 @@ Date:   Wed Jan 13 15:13:01 2016 +0100
 						<p class="fragment">but having a graphical interface is better...</p>
 					</section>
 					<section>
-						<img src="images/history_sourcetree.png"/>
+				<img src="images/history_sourcetree.png"/>
 					</section>
 				</section>
 				<section>
@@ -165,7 +196,7 @@ Date:   Wed Jan 13 15:13:01 2016 +0100
 						<div class="fragment">
 							<p>add a single file</p>
 							<code>git add myfile.txt</code>
-						</div>
+			</div>
 							<div class="fragment">
 								<p>add all files</p>
 								<code>git add --all</code>
@@ -222,7 +253,7 @@ Changes to be committed:
 			<script src="js/reveal.js"></script>
 
 			<script>
-
+			
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
