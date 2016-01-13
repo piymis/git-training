@@ -10,6 +10,11 @@ Plan
     * branching
     * fast
   * Repository working copy
+* Setup
+ * windows
+ * linux
+ * mac
+ * configuration
 * Working with git
   * commit + ancestors
   * log
@@ -21,6 +26,7 @@ Plan
   * merge
   * cherry pick
   * rebase
+  * .gitignore
 * Github
   * clone/fork
   * pull request
@@ -30,5 +36,6 @@ Plan
   * IDE integration
   * turtoise git (windows)
   * github desktop
+  * babun + zsh + ohmyzsh
 * git-svn
 * resources
