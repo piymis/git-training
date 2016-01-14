@@ -21,12 +21,11 @@ Plan
   * log
   * staging area
   * branch + tag
-  * diff
   * merge
+  * rebase
   * fetch pull push
   * stash
   * cherry pick
-  * rebase
   * .gitignore
 * Github
   * clone/fork
