@@ -20,11 +20,11 @@ Plan
   * commit + ancestors
   * log
   * staging area
-  * stash
   * branch + tag
   * diff
-  * fetch pull push
   * merge
+  * fetch pull push
+  * stash
   * cherry pick
   * rebase
   * .gitignore

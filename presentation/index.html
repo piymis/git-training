@@ -147,11 +147,20 @@
 			</section>
 
 
-
 				<section>
 					<h3>Working with git</h3>
 				</section>
 				<section>
+					<h3>Initialize a repository</h3>
+					<p>
+						two ways of doing it
+						<ul>
+							<li class="fragment">create a new one: <code>git init .</code></li>
+							<li class="fragment">Clone an existing: <code>git clone git@github.com:bonitasoft/bonita-engine.git</code></li>
+						</ul>
+					</p>
+				</section>
+					<section>
 					<section>
 						<h3>Commits</h3>
 						<img src="images/history_sourcetree.png"/>
@@ -254,13 +263,102 @@ Changes to be committed:
 				</section>
 				<section>
 					<section>
+						<h3>Branch and tag</h3>
+						<img src="images/branches.png"/>
+					</section>
+					<section>
+						<p>A branch is simple pointer to a commit, that is why a branch is git is very light</p>
+						<p class="fragment">A branch can be created using <br/><code>git branch branch_name</code></p>
+						<p class="fragment">Then get is using<br/><code>git checkout branch_name</code></p>
+					</section>
+					<section>
+						<p>When a commit is done on a branch it changes where the branch point to<p>
+					</section>
+					<section>
+						<img class="fragment" src="images/branch_before_commit.png"/>
+						<pre class="fragment"><code>
+$ git checkout iss53
+$ vim index.html
+$ git commit -a -m 'add a new footer [issue 53]'
+						</code></pre>
+						<img class="fragment" src="images/branch_after_commit.png"/>
+					</section>
+					<section>
+						<h3>tag</h3>
+						<p>tags are like branch but they do not move</p>
+						<code>git tag -a "7.2.0"</code>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>merge</h3>
+						<p>you can merge a branch into an other branch with <br/><code>git merge branch_name</code></p>
+					</section>
+					<section>
+						<img src="images/merge_before.png"/>
+					</section>
+					<section>
+						<pre><code>
+$ git checkout master
+$ git merge iss53
+ Auto-merging README
+Merge made by the 'recursive' strategy.
+ README | 1 +
+ 1 file changed, 1 insertion(+)
+ 								</code></pre>
+					</section>
+					<section>
+						<img src="images/merge_after.png"/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>rebase</h3>
+						<p>rebase is 'moving' a branch and all its commit to an other starting point</p>
+					</section>
+					<section>
+						<img src="images/rebase_before.png"/>
+					</section>
+					<section>
+						<pre><code>
+$ git checkout experiment
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: added staged command
+ 								</code></pre>
+					</section>
+					<section>
+						<img src="images/rebase_after.png"/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Working with remote repository</h3>
+						<p>The local repository can fetch and push commits to an other repository</p>
+							<img src="images/remote_repository.png"/>
+					</section>
+					<section>
 						<h3>fetch pull and push</h3>
-						<p>these command allow interaction with a remote repository</p>
+						<p>these command allow interaction the remote repository</p>
 					</section>
 						<section>
 							<h3>fetch and pull</h3>
-							<p class="fragment"><code>git fetch</code> retrieve changes from a remote repository but do not change the working copy</p>
-							<p class="fragment"><code>git pull</code> is used more often, it is a shortcut that does <code>git fetch</code> and <code>git merge</code></p>
+							<p class="fragment"><code>git fetch</code> retrieve changes from a remote repository but do not change the working copy<br/>it only update remote branches, e.g. origin/master</p>
+							<p class="fragment"><code>git merge</code> without more argument merge the current branch with the branch it tracks</p>
+							<p class="fragment"><code>git pull</code> is used more often, it is a shortcut that does <code>git fetch</code> and <code>git merge</code><br/>
+								it can be used with the option <code>--rebase</code> that redo the local commit starting from the new remote position
+							</p>
+						</section>
+						<section>
+							<p>it often happend to be like this, you made local commit and someone else pushed commit to the remote repository</p>
+							<img src="images/remote_before_fetch.png"/>
+						</section>
+						<section>
+							<p>the <code>git fetch</code> retrieve changes</p>
+							<img src="images/remote_before_push.png"/>
+						</section>
+						<section>
+							<p >You can now choose to merge or rebase you local changes</p>
 						</section>
 				</section>
 
@@ -333,7 +431,7 @@ Changes to be committed:
 			<script src="js/reveal.js"></script>
 
 			<script>
-			
+
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
